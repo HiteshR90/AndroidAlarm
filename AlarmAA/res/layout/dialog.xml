@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="300dip"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:gravity="center" 
+        android:id="@+id/relativesc">
+
+    <RelativeLayout
+        android:id="@+id/relative_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center" >
+
+        <Spinner
+            android:id="@+id/spindays"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            
+            android:entries="@array/alarm_repeat"
+        />       
+        
+     </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="325dip"
+        android:layout_below="@+id/relative_spinner" >
+
+        <CheckBox
+            android:id="@+id/checkmon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="60dp" />
+
+        <CheckBox
+            android:id="@+id/checktue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checkmon"
+            android:layout_below="@+id/checkmon" />
+
+        <CheckBox
+            android:id="@+id/checkwed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checktue"
+            android:layout_below="@+id/checktue" />
+
+        <CheckBox
+            android:id="@+id/checkthu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checkwed"
+            android:layout_below="@+id/checkwed" />
+
+        <CheckBox
+            android:id="@+id/checkfri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checkthu"
+            android:layout_below="@+id/checkthu" />
+
+        <CheckBox
+            android:id="@+id/checksat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checkfri"
+            android:layout_below="@+id/checkfri" />
+
+        <CheckBox
+            android:id="@+id/checksun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checksat"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/checksat" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkmon"
+            android:layout_alignBottom="@+id/checkmon"
+            android:layout_marginRight="52dp"
+            android:layout_toLeftOf="@+id/checkmon"
+            android:text="Monday"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checktue"
+            android:layout_alignBottom="@+id/checktue"
+            android:layout_alignLeft="@+id/textView1"
+            android:text="Tuesday"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkwed"
+            android:layout_alignBottom="@+id/checkwed"
+            android:layout_alignLeft="@+id/textView2"
+            android:text="Wednesday"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkthu"
+            android:layout_alignBottom="@+id/checkthu"
+            android:layout_alignLeft="@+id/textView3"
+            android:text="Thursday"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checksat"
+            android:layout_alignBottom="@+id/checksat"
+            android:layout_alignLeft="@+id/textView4"
+            android:text="Saturday"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkfri"
+            android:layout_alignBottom="@+id/checkfri"
+            android:layout_alignLeft="@+id/textView6"
+            android:text="Friday"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checksun"
+            android:layout_alignBottom="@+id/checksun"
+            android:layout_alignLeft="@+id/textView6"
+            android:text="Sunday"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+   
+    </RelativeLayout>
+
+    </ScrollView>
+
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20.0dip"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingTop="10.0dip" >
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="6dip"
+    android:orientation="vertical"
+    android:background="@drawable/bg"> 
+
+    <LinearLayout android:id="@+id/snooze_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stat_notify_alarm"/>
+        <TextView android:id="@+id/snooze_message_text" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_clock_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/img_alarmclock_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#80000000"
+            android:src="@drawable/settings" />
+
+        <ImageButton
+            android:id="@+id/img_alarmclock_addalarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/img_alarmclock_setting"
+            android:background="#80000000"
+            android:src="@drawable/alarm" />
+
+        <ImageButton
+            android:id="@+id/img_alarmclock_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/img_alarmclock_addalarm"
+            android:background="#80000000"
+            android:src="@drawable/clock" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#57575600" >
+        <Button
+                android:id="@+id/btn_alarmclock_addnewalarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/plus"
+                
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="10dip"
+                android:paddingBottom="10dip"
+                android:layout_marginRight="15dip"
+                android:textSize="20dip"
+                 />
+
+        <TextView
+            android:id="@+id/txt_alarm_clcok_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_alarmclock_addnewalarm"
+            android:layout_alignBottom="@+id/btn_alarmclock_addnewalarm"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:text="Alarms"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/clock_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:gravity="center"/> 
+
+    <ListView
+        android:id="@+id/alarms_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/alarms_list_empty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/alarm_list_empty"
+        android:textSize="10pt" 
+        />
+
+    <LinearLayout android:id="@+id/quick_alarm"
+      android:orientation="horizontal"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:layout_gravity="center"
+      >
+    </LinearLayout>
+
+
+
+</LinearLayout>

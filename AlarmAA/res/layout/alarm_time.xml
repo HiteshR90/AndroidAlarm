@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <!-- A layout that displays the time.  Shows time, am/pm (if 12-hour),
+         and an optional line below, used for day/days of week -->
+
+    <com.hr.alarm.DigitalClock
+        android:id="@+id/digitalClock"
+        android:layout_width="wrap_content"
+        android:layout_height="83dp"
+        android:layout_weight="1"
+        android:background="@android:drawable/menuitem_background"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/timeDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:textColor="@color/white"/>
+
+            <LinearLayout android:id="@+id/am_pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/am"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/am"
+                    android:textSize="12sp"/>
+                <TextView android:id="@+id/pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:text="@string/pm"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" >
+                        <Spinner
+			                android:id="@+id/label"
+			                android:layout_width="fill_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginLeft="20dp"
+			                android:entries="@array/alarm_repeat"
+			                android:paddingBottom="-4dp"
+			                android:background="@drawable/graybox"
+                            android:inputType="text" 
+                            android:paddingTop="-4dp"
+			                android:singleLine="true"
+			                android:text="@string/default_label"
+			                android:textColor="@android:color/white"
+			                android:textSize="28sp" />
+                        <ImageView
+                            android:layout_width="20dip"
+                            android:layout_height="15dip"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/combo_arrow" />
+                    </FrameLayout>
+            
+            
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/daysOfWeek"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/ltgrey"
+            android:layout_marginLeft="2dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dip" >
+        
+        <CheckBox
+            android:id="@+id/btnm"
+            android:button="@drawable/selector_check"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+             />
+
+        <CheckBox
+            android:id="@+id/btntue"
+            style="?android:attr/buttonStyleSmall"
+            android:button="@drawable/selector_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+        <CheckBox
+            android:id="@+id/btnwed"
+            android:button="@drawable/selector_check"
+            style="?android:attr/buttonStyleSmall"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <CheckBox
+            android:id="@+id/btnthu"
+            android:button="@drawable/selector_check"
+            style="?android:attr/buttonStyleSmall"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          />
+        <CheckBox
+            android:id="@+id/btnfri"
+            android:button="@drawable/selector_check"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <CheckBox
+            android:id="@+id/btnsat"
+            android:button="@drawable/selector_check"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+        <CheckBox
+            android:id="@+id/btnsun"
+            android:button="@drawable/selector_check"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+        
+	</LinearLayout>
+    </com.hr.alarm.DigitalClock>
+
+    <CheckBox android:id="@+id/alarmButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/set_alarm"
+        >
+    <PreferenceCategory android:title="@string/settings">
+        <CheckBoxPreference android:key="on" 
+            android:title="@string/enable"
+            android:persistent="false"
+            android:background="@color/red"
+            />
+        
+        <Preference android:key="time" 
+            android:title="@string/time"
+            android:persistent="false"
+           
+            />
+        <EditTextPreference android:key="label"
+            android:title="@string/label"
+            android:dialogTitle="@string/label" 
+            android:singleLine="true"
+            android:selectAllOnFocus="true"
+            android:persistent="false"
+            android:background="#041A37"
+            />
+                      
+        <com.hr.alarm.RepeatPreference android:key="setRepeat" 
+            android:title="Days"
+            android:entries="@array/days_of_week"
+            android:entryValues="@array/days_of_week"
+        	
+            android:persistent="false"
+            />
+        
+        <com.hr.preference.SeekBarPreference android:key="snooze"
+            android:title="@string/snooze"
+            android:text="@string/minutes_suffix"
+            android:max="60"
+        	
+            android:defaultValue="9"
+            android:persistent="false"
+            android:hint="@string/snooze_disabled"
+            />
+        <com.hr.preference.SeekBarPreference android:key="duration"
+            android:title="@string/duration"
+            android:text="@string/minutes_suffix"
+            android:entries="@array/duration_values"
+            android:hint="@string/duration_disabled"
+            android:defaultValue="6"
+            android:persistent="false"
+            />
+        <ListPreference android:key="captcha_snooze" 
+            android:title="@string/captcha_snooze"
+            android:entries="@array/captcha_types"
+            android:entryValues="@array/captcha_values"
+            android:defaultValue="0"
+            android:persistent="false"
+            />
+        <ListPreference android:key="captcha_dismiss" 
+            android:title="@string/captcha_dismiss"
+            android:entries="@array/captcha_types"
+            android:entryValues="@array/captcha_values"
+            android:defaultValue="0"
+            android:persistent="false"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/alert">
+        <CheckBoxPreference android:key="vibrate" 
+            android:title="@string/alarm_vibrate"
+            android:persistent="false"
+            />
+        <CheckBoxPreference android:key="vibrate_only" 
+            android:title="@string/vibrate_only"
+            android:persistent="false"
+            android:defaultValue="false"
+            android:disableDependentsState="true"
+            />
+        <com.hr.alarm.AlarmPreference android:key="alarm" 
+            android:title="@string/alert"
+            android:ringtoneType="alarm"
+            android:showDefault="false"
+            android:showSilent="false" 
+            android:dependency="vibrate_only"
+            android:persistent="false"
+            />
+        <com.hr.preference.SeekBarPreference android:key="volume"
+            android:title="@string/volume"
+            android:text="@string/percent"
+            android:entries="@array/volume_values"
+            android:defaultValue="9"
+            android:dependency="vibrate_only"
+            android:persistent="false"
+            />
+       
+    </PreferenceCategory>
+</PreferenceScreen>

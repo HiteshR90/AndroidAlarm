@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:id="@+id/relative_setalarm_header"
+        android:background="#3d3d3d" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Edit Alarm"
+            android:textColor="@android:color/white"
+            android:background="#00000000"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_setalarm"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relative_setalarm_header"
+        android:layout_marginTop="10dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        <RelativeLayout
+            android:id="@+id/relative_setalarm_time"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:background="#3f3f3f"
+             
+             >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:text="08:00 AM"
+                android:id="@+id/btn_setalarm_time"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="90dip" >
+                        <Spinner
+			               android:id="@+id/spin_setalarm_time"
+			                android:layout_width="200dip"
+			                android:layout_height="wrap_content"
+			                android:entries="@array/alarm_repeat"
+			                android:layout_centerHorizontal="true"
+			                android:layout_centerVertical="true" 
+			                android:paddingBottom="-4dp"
+			                android:background="@drawable/graybox"
+                            android:inputType="text" 
+                            android:paddingTop="-4dp"
+			                android:singleLine="true"
+			                android:text="@string/default_label"
+			                android:textColor="@android:color/white"
+			                android:textSize="28sp" />
+                        <ImageView
+                            android:layout_width="20dip"
+                            android:layout_height="15dip"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/combo_arrow" />
+                    </FrameLayout>
+            
+          
+
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/relative_setalarm_type"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_below="@+id/relative_setalarm_time">
+            <TextView 
+                android:id="@+id/txt_setalarm_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarm Type"/>
+             <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="5dip"
+                        >
+                        <Spinner
+			                android:id="@+id/spin_setalarm_type"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:layout_alignParentBottom="true"
+			                android:layout_centerHorizontal="true"
+			                android:entries="@array/alarm_type" 
+			                android:layout_marginRight="5dip"
+			                android:layout_centerVertical="true" 
+			                android:paddingBottom="-4dp"
+			                android:background="@drawable/graybox"
+                            android:inputType="text" 
+                            android:paddingTop="-4dp"
+			                android:singleLine="true"
+			                android:text="@string/default_label"
+			                android:textColor="@android:color/white"
+			                android:textSize="28sp" />
+                        <ImageView
+                            android:layout_width="20dip"
+                            android:layout_height="15dip"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/combo_arrow" />
+                    </FrameLayout>
+
+            
+
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/relative_setalarm_soundpicker"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_below="@+id/relative_setalarm_type">
+            <TextView 
+                android:id="@+id/txt_setalarm_soundpicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarm Sound Picker"/>
+
+            <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="5dip"
+                        >
+                        <Spinner
+			               android:id="@+id/spin_setalarm_soundpicker"
+			               
+			                android:entries="@array/alarm_sound_picker"
+			                android:layout_alignParentBottom="true"
+			                android:layout_centerHorizontal="true"
+			               android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:layout_marginRight="5dip"
+			                android:layout_centerVertical="true" 
+			                android:paddingBottom="-4dp"
+			                android:background="@drawable/graybox"
+                            android:inputType="text" 
+                            android:paddingTop="-4dp"
+			                android:singleLine="true"
+			                android:text="@string/default_label"
+			                android:textColor="@android:color/white"
+			                android:textSize="28sp" />
+                        <ImageView
+                            android:layout_width="20dip"
+                            android:layout_height="15dip"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/combo_arrow" />
+                    </FrameLayout>
+            
+            
+
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/relative_setalarm_ringbackground"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_below="@+id/relative_setalarm_soundpicker">
+            <TextView 
+                android:id="@+id/txt_setalarm_ringbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarm Ring Background"/>
+
+             <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="5dip"
+                        >
+                        <Spinner
+			                android:id="@+id/spin_setalarm_ringbackground"
+			                android:entries="@array/alarm_ring_background"
+			                android:layout_alignParentBottom="true"
+			                android:layout_centerHorizontal="true"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:layout_marginRight="5dip"
+			                android:layout_centerVertical="true" 
+			                android:paddingBottom="-4dp"
+			                android:background="@drawable/graybox"
+                            android:inputType="text" 
+                            android:paddingTop="-4dp"
+			                android:singleLine="true"
+			                android:text="@string/default_label"
+			                android:textColor="@android:color/white"
+			                android:textSize="28sp" />
+                        <ImageView
+                            android:layout_width="20dip"
+                            android:layout_height="15dip"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/combo_arrow" />
+                    </FrameLayout>
+            
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/relative_setalarm_snooze"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_below="@+id/relative_setalarm_ringbackground">
+            <TextView 
+                android:id="@+id/txt_setalarm_snooze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snooze (min)"/>
+
+            <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="5dip"
+                        >
+                        <Spinner
+			                android:id="@+id/spin_setalarm_snooze"
+			                android:entries="@array/alarm_snooze"
+			                android:layout_alignParentBottom="true"
+			                android:layout_centerHorizontal="true"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:layout_marginRight="5dip"
+			                android:layout_centerVertical="true" 
+			                android:paddingBottom="-4dp"
+			                android:background="@drawable/graybox"
+                            android:inputType="text" 
+                            android:paddingTop="-4dp"
+			                android:singleLine="true"
+			                android:text="@string/default_label"
+			                android:textColor="@android:color/white"
+			                android:textSize="28sp" />
+                        <ImageView
+                            android:layout_width="20dip"
+                            android:layout_height="15dip"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/combo_arrow" />
+                    </FrameLayout>
+            
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/relative_setalarm_alart"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_below="@+id/relative_setalarm_snooze">
+            <TextView 
+                android:id="@+id/txt_setalarm_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alert type"/>
+
+            
+            <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="5dip"
+                        >
+                        <Spinner
+			                android:id="@+id/spin_setalarm_alert"
+			                android:entries="@array/alarm_alert"
+			                android:layout_alignParentBottom="true"
+			               	android:layout_centerHorizontal="true"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:layout_marginRight="5dip"
+			                android:layout_centerVertical="true" 
+			                android:paddingBottom="-4dp"
+			                android:background="@drawable/graybox"
+                            android:inputType="text" 
+                            android:paddingTop="-4dp"
+			                android:singleLine="true"
+			                android:text="@string/default_label"
+			                android:textColor="@android:color/white"
+			                android:textSize="28sp" />
+                        <ImageView
+                            android:layout_width="20dip"
+                            android:layout_height="15dip"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/combo_arrow" />
+                    </FrameLayout>
+
+        </RelativeLayout>
+        
+        
+        <RelativeLayout 
+            android:id="@+id/relative_setalarm_label"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_below="@+id/relative_setalarm_alart">
+            <TextView 
+                android:id="@+id/txt_setalarm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Label"/>
+
+            <EditText
+                android:id="@+id/edit_setalarm_label"
+                android:layout_width="300dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_setalarm_label"
+                android:layout_centerHorizontal="true"
+                android:ems="10" >
+
+               
+            </EditText>
+
+          </RelativeLayout>
+        
+         <RelativeLayout 
+            android:id="@+id/relative_setalarm_note"
+            android:layout_width="fill_parent"
+            android:layout_height="130dip"
+            android:layout_below="@+id/relative_setalarm_label">
+            <TextView 
+                android:id="@+id/txt_setalarm_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note"/>
+
+            <EditText
+                android:id="@+id/edit_setalarm_note"
+                android:layout_width="300dip"
+                android:layout_height="100dip"
+                android:layout_below="@+id/txt_setalarm_note"
+                android:layout_centerHorizontal="true"
+                android:ems="10" />
+
+          </RelativeLayout>
+         <RelativeLayout android:id="@+id/relative_setalarm_buttons"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/relative_setalarm_note"
+       >
+
+        <Button
+            android:id="@+id/btn_setalarm_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="53dp"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btn_setalarm_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="52dp"
+            android:text="Save" />
+
+    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+   
+    
+</RelativeLayout>
